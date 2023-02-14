@@ -1,0 +1,411 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg--light: hsl(200, 10%, 92%);
+    --bg--base: #ffffff;
+    --primary--dark: hsl(188, 21%, 58%);
+    --primary--accent: hsl(188, 86%, 41%);
+    --secondary--dark: hsl(207, 41%, 44%);
+    --secondary--light: hsl(200, 22%, 78%);
+    --text-clr-200: hsl(195, 6%, 34%);
+    --text-clr-300: hsl(197, 8%, 54%);
+    --text-clr-400: hsl(199, 8%, 70%);
+    --border-clr: hsl(200, 10%, 83%);
+    --fs--base: 1rem;
+    --fs--01: 0.889rem;
+    --fs--02: 1.125rem;
+    --fs--03: 1.266rem;
+    --fs-title--s: 2.027rem;
+    --fs-title--m: 1.802rem;
+    --fs-title--l: 2.566rem;
+    --fs-title--xl: 3.247rem;
+    --space--025: 0.25rem;
+    --space--05: 0.5rem;
+    --space--075: 0.75rem;
+    --space--1: 1rem;
+    --space--15: 1.5rem;
+    --space--2: 2rem;
+}
+picture,
+img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+body {
+    display:grid;
+    place-items:center;
+    font-family: "Roboto", sans-serif;
+    min-block-size: 100vh;
+    background: hsl(200, 10%, 92%);
+}
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr min-content;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "aside header" "aside main" "footer footer";
+    width: 794px;
+    max-height: 1500px;
+    margin-inline: auto;
+    outline: 1px solid var(--text-clr-200);
+    border-radius: 0.5rem;
+    padding: var(--space--1);
+    gap: 0 var(--space--1);
+    background-color: var(--bg--base);
+}
+.header {
+    grid-area: header;
+    display: grid;
+    place-content: center;
+    position: relative;
+    min-height: 20rem;
+    isolation: isolate;
+}
+.header::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    inset: 0;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75%);
+    background-color: var(--primary--accent);
+}
+.primary--heading {
+    text-align: center;
+    margin-inline: 0.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-block-end: 0.75rem;
+    font-size: clamp(2rem, -0.29rem + 5.73vw, 3.38rem);
+}
+.heading--deco {
+    display: inline-flex;
+    margin-inline-start: 0.75rem;
+    align-self: flex-start;
+    letter-spacing: calc(0.25rem + 0.5vw);
+    color: #fff;
+}
+.secondary--heading {
+    
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,500;0,600;0,800;0,900;1,500;1,700;1,800&display=swap');
+
+    font-style: Bold 700 Italic;
+    background-color: #fff;
+    margin-inline: auto;
+    padding-inline: 1em;
+    color: var(--text-clr-300);
+    font-family: 'Fira Sans', sans-serif;
+    font-size: clamp(1.4rem, 0.86rem + 1.35vw, 1.73rem);
+}
+.aside {
+    grid-area: aside;
+    display: grid;
+    grid-template-columns: fit-content(27vh);
+    gap: var(--space--2);
+    border: 2px solid var(--border-clr);
+}
+.image__container {
+    margin-inline: 	hsl(208, 30%, 89%);
+    margin-block-start: 	hsl(209, 22%, 48%);
+    width: 40vh;
+   
+padding-left: 75px;
+
+
+}
+.image {
+    object-fit: cover;
+    outline: 4px solid hsl(249, 61%, 78%);
+    outline-offset: -0.6rem;
+    text-align: center;
+    margin-top: 40px;
+}
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space--1);
+}
+.details [role="list"] {
+    margin-inline: var(--space--1);
+    list-style: none;
+}
+.title {
+    margin-block-end: var(--space--1);
+    max-width: 20ch;
+    background-color: var(--bg--light);
+    padding: var(--space--020) var(--space--1);
+    color: var(--primary--accent);
+    font-weight: 500;
+}
+.contact__information [role="listitem"] {
+    margin-inline: var(--space--05);
+    display: flex;
+    align-items: center;
+    gap: var(--space--0);
+
+    height: 2.5rem;
+}
+.icon {
+    display: inline-grid;
+    aspect-ratio: 1;
+    height: 90%;
+    place-content: center;
+    color: var(--primary--accent);
+    font-size: 1.25em;
+}
+.text {
+    font-weight: 500;
+    color: var(--text-clr-300);
+}
+.education :has([role="list"]):nth-last-of-type(2) {
+    margin-block-end: 1rem;
+}
+.sub--title {
+    font-weight: 600;
+    margin-block-end: 	#cdcde2;
+    text-transform: uppercase;
+    color: 	#2727e7;
+}
+.sublistitem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 3rem;
+}
+.sublistitem > *:last-of-type {
+    color: 	#000080;
+    font-weight: 400;
+}
+.sub--text {
+    font-size:	#000080;
+    text-transform: uppercase;
+    font-weight: 600;
+    color:	#003c80;
+}
+.main {
+    grid-area: main;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.about__me {
+    flex: 0 1 auto;
+}
+.about__me p {
+    max-width: 45ch;
+    color: 	#000080;
+}
+.skills__content--flow {
+    display: flex;
+    gap: 	#000080;
+}
+.skills__content--flow > * {
+    flex: 1;
+}
+.special__skills {
+    display: inline-flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 0.25rem;
+    counter-reset: special-counter;
+}
+.special__skills li {
+    font-size: var(--fs--01);
+    font-weight: bold;
+    counter-increment: special-counter;
+}
+.special__skills li::before {
+    content: counter(special-counter);
+    background-color: var(--primary--accent);
+    outline: 5px solid #c7c4e2;
+    outline-offset: -0.25rem;
+    display: inline-grid;
+    place-content: center;
+    margin-inline: 0.5rem;
+    border-radius: 50%;
+    font-size: 1.125rem;
+    aspect-ratio: 1;
+    color: #6872a0;
+    height: 1.75rem;
+}
+.special__skills > * {
+    color: var(--text-clr-300);
+}
+.skill__diagram {
+    margin-top: 0.5rem;
+}
+.diagram {
+    background-color: var(--bg--light);
+}
+.diagram--id {
+    background-color: hsla(0, 52%, 96%, 0.842);
+    color: var(--text-clr-200);
+    font-weight: bold;
+    font-size: var(--fs--01);
+    line-height: 1.6;
+}
+.skill-bar {
+    justify-content: end;
+    color: #3a2bc7;
+    padding: 0.25rem 0;
+    display: inline-flex;
+    background-color: 	#a8dafc;
+}
+.Semantic{
+    width: 40%;
+}
+.html {
+    width: 90%;
+}
+.css {
+    width: 90%;
+}
+.javascript {
+    width: 85%;
+}
+.Java {
+    width: 85%;
+
+}
+
+.footer {
+    grid-area: footer;
+    margin-top: 1rem;
+    background-color: 	hsl(282, 26%, 93%);
+    height: 3em;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <header class="header">
+        <h1 class="primary--heading">Monika<span class="heading--deco">BISHT</span></h1>
+        <h2 class="secondary--heading">Full Stack Web Developer</h2>
+    </header>
+    <aside class="aside">
+        <figure class="image__container"> <img src="https://media.licdn.com/dms/image/D4D03AQENi1FBs5oF-Q/profile-displayphoto-shrink_800_800/0/1675790474945?e=1681948800&v=beta&t=IC4GS8wAnNgGzaLE1hi06s52WvMo8JaJ5fB-73fVDMc" alt="" class="image"> </figure>
+        <article class="details">
+            <ul role="list" class="contact__information">
+                <h3 class="title">Contact</h3>
+                <li role="listitem"> <span class="icon"> <i class="fas fa-location-pin"></i> </span> <span class="text">Pune Maharashtra </span> </li>
+                <li role="listitem"> <span class="icon"> <i class="fas fa-phone"></i> </span> <span class="text">+91 8080939813</span> </li>
+                <li role="listitem"> <span class="icon"> <i class="fas fa-envelope"></i> </span> <span class="text">monikabisht920@gmail.com</span> </li>
+                
+            </ul>
+            <ul role="list" class="contact__information">
+                <h3 class="title">Links</h3>
+                <li role="listitem" class="sublistitem"> <span class="text sub--text">naukri.com</span> <span><a href="https://www.naukri.com/mnjuser/homepage">https://www.naukri.com/mnjuser/homepage</a></span> </li>
+                        <li role="listitem" class="sublistitem"> <span class="text sub--text">Linkedin.com</span><span><a href="https://www.linkedin.com/in/monika-bisht-b88397210/">https://www.linkedin.com/in/monika-bisht-b88397210/</a></span> </li>
+                        
+                
+            </ul>
+            <ul role="list" class="education">
+                <h3 class="title">Education</h3>
+                <li role="listitem">
+                    <h4 class="sub--title">Collages:</h4>
+                    <ul role="list" class="sublist">
+                        <li role="listitem" class="sublistitem"> <span class="text sub--text">BCA (Batchlor of computer Application)</span> <span>year of 2021</span> </li>
+                       <li role="listitem"class="sublistitem"><span class="text sub--text">MCA (Master of computer Application)</span><span>year of 2023</span> </li>
+                        
+                    </ul>
+                </li>
+                <li role="listitem">
+                    <h4 class="sub--title">Courses:</h4>
+                    <ul role="list" class="sublist">
+                        <li role="listitem" class="sublistitem"> <span class="text sub--text">Full Stake Web Development</span> <span>SoloLearn Certificate</span> </li><br>
+                        <li role="listitem" class="sublistitem"> <span class="text sub--text">Java developer</span> <span>SoloLearn Certificate</span> </li><br>
+                        
+
+                        <li role="listitem">
+                            <h4 class="sub--title">Technical Skills:</h4><br>
+
+ <li role="listitem" class="sublistitem"><samp class="text sub--text">Languages: Java, JavaScript, SQL, Java Beans, JSP, C++, HTML, XML, CICS, COBOL, E-COBOL, REXX, RPG II, JCL.</li><br>
+
+    <li role="listitem"class="sublistitem"><samp class="text sub--text">Databases: MS SQL Server, IBM DB2, Oracle, MySQL, Database SQL command.</li> <br>
+       <li role="listitem"class="sublistitem"><samp class="text sub--text">Frameworks: JSF, J2EE, Apache Struts, Java Mai, Software: Eclipse, WSAD, Clear Case, Toad, Network Data Mover (NDM).</li>    <br>         
+    <li role="listitem"class="sublistitem"><samp class="text sub--text">API's : Servlets, EJB, Java Naming and Directory Interface(JND); Servers: Web Sphere(WAS), Sun Java Enterprise System, JES.</li><br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </ul>
+                </li>
+            </ul>
+        </article>
+    </aside>
+    <main class="main">
+        <article class="about__me">
+            <h3 class="title">About Me</h3>
+            <p>Hi I This is Monika Bisht ,Full-stack developer. Enthusiastic and reliable  Full-stack Developer with a strong JavaScript knowledge base. 6th Months of industry experience as part of a computer program development team. Proficient at being able to clearly explain complex computer development concepts to a variety of audiences. Experience includes developing apps, websites, and complex programs while at university Jain (Bangalore). Skills in Java, JavaScript, SQL, Java Beans, JSP, C++, HTML, XML, CICS MS SQL Server, IBM DB2, Oracle, MySQL, and Database SQL commandLife ...</p> 
+            
+        </article>
+        <article class="skills">
+            <h3 class="title">Skills</h3>
+            <div class="skills__content--flow">
+                <ol role="list" class="special__skills">
+                    <li role="listitem">Semantic</li>
+                    <li role="listitem">Modern CSS</li>
+                    <li role="listitem">CSS Flexbox</li>
+                    <li role="listitem">Custom variables</li>
+                    <li role="listitem">HTML</li>
+                    <li role="listitem">Conditional CSS</li>
+                    <li role="listitem">Responsive layout</li>
+                    <li role="listitem">Bootstrap</li>
+                    <li role="listitem">JavaScript</li>
+                    <li role="listitem">React js</li>
+                    <li role="listitem">DOM</li><br>
+
+                    </ol>
+                <section class="skill__diagram">
+
+                    <figcaption class="diagram">
+                        <h5 class="diagram--id">Semantic</h5><span class="skill-bar html">50%</span>
+
+                    <figcaption class="diagram">
+                        <h5 class="diagram--id">HTML</h5> <span class="skill-bar html">90%</span>
+                    </figcaption>
+                    <figcaption class="diagram">
+                        <h5 class="diagram--id">CSS</h5> <span class="skill-bar css">90%</span>
+                    </figcaption>
+                    <figcaption class="diagram">
+                        <h5 class="diagram--id">JavaScript</h5> <span class="skill-bar javascript">85%</span>
+                    </figcaption>
+                    <figcaption class="diagram">
+                        <h5 class="diagram--id">Java</h5> <span class="skill-bar Java">80%</span>
+                    </figcaption>
+                    <figcaption class="diagram">
+                        
+                       
+                </section>
+            </div>
+        </article>
+    </main>
+    <footer class="footer"></footer>
+</div>
+    
+</body>
+</html>
